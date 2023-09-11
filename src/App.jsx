@@ -1,7 +1,8 @@
-import logo from './logo.svg';
+
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
 import Navbar from './Navbar';
 import Home from './Home';
+import Create from './create';
 
 
 function App() {
@@ -11,8 +12,11 @@ function App() {
         <Navbar />
         <div className="content">
           <Switch>
-            <Route path="/">
+            <Route exact path="/">
               <Home />
+            </Route>
+            <Route path="/create">
+              <Create />
             </Route>
           </Switch>
         </div>
